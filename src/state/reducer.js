@@ -1,4 +1,4 @@
-import { TEST, UPDATE_FIELD, LOGGING } from './constants'
+import { UPDATE_FIELD } from './constants'
 
 export const DEFAULT_STATE = { 
   headerTwo: 'Header Two Initial', 
@@ -17,14 +17,6 @@ export const DEFAULT_STATE = {
   userOfDish: ''
 } 
 
-const toggle = (current, opt1, opt2) => {
-  return current === opt1 ? opt2 : opt1
-}
-
-const logged = username => {
-  return username !== 'username' || '' ? true : false
-}
-
 export const reducer = (state = DEFAULT_STATE, { type, payload = {} }) => {
   switch (type) {
     case UPDATE_FIELD: 
@@ -32,16 +24,7 @@ export const reducer = (state = DEFAULT_STATE, { type, payload = {} }) => {
         ...state,
         [payload.name]: payload.value
       }
-    case TEST: 
-      return {
-        ...state,
-        headerTwo: toggle(state.headerTwo, 'Header Two Changed', 'Header Two Changed Back')
-      }
-    case LOGGING: 
-      return {
-        ...state,
-        username: logged(payload.username)
-      }
+
   default:
     return state
   }

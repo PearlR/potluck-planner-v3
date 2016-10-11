@@ -5,7 +5,7 @@
 Potluck planner is an app that helps to solve the issue of co-ordinating who is bringing what dish to a potluck dinner. 
 
 - Create events
-- Invite Friends
+- Invite friends
 - App has different methods to co-ordinate dishes people are bringing
 
 ## Technologies used to create the app
@@ -17,5 +17,4 @@ Potluck planner is an app that helps to solve the issue of co-ordinating who is 
 - React Router Redux
 - Redux
 - enzyme
-- deep-freeze
-
+- ES6, immutable, pure, functional programming
