@@ -1,21 +1,13 @@
 import React from 'react'
-import { connect } from 'react-redux'
 
 import Welcome from '../Welcome/Welcome'
-import LoginSignInButtons from '../Login-Signin-buttons/Login-Signin-buttons'
-import username from '../../state/reducer'
+import NavBar from '../NavBar/NavBar'
 
-const Homepage = ({ username }) => {
+const Homepage = () => {
   return <div>
+    <NavBar />
     <Welcome />
-    <LoginSignInButtons />
   </div>
 }
 
-const mapStateToProps = state => {
-  return {
-    username: username
-  }
-}
-
-export default connect(mapStateToProps)(Homepage)
+export default Homepage

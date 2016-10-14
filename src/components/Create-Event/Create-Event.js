@@ -1,15 +1,20 @@
 import React from 'react'
 import { Link } from 'react-router'
 import { connect } from 'react-redux'
+import { Button, ButtonGroup, FormGroup, FormControl } from 'react-bootstrap'
 
 import { updateField } from '../../state/actions'
 import { eventTitles } from '../../state/selectors'
 
 const CreateEvent = ({ eventTitle, handleChange }) => {
   return <div>
-    <h1>Let's create a potluck!</h1>
-    <input type='text' name='eventTitle' value={eventTitle} onChange={handleChange} />
-    <button><Link to='/details'>Let's go!</Link></button>
+    <FormGroup>
+      <h1>Let's create a potluck!</h1>
+      <FormControl type='text' name='eventTitle' placeholder={eventTitle} onChange={handleChange} />
+      <ButtonGroup>
+        <Button><Link to='/details'>Let's go!</Link></Button>
+      </ButtonGroup>  
+    </FormGroup>
   </div>
 }
 

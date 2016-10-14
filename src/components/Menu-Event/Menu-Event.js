@@ -1,20 +1,24 @@
 import React from 'react'
 import { Link } from 'react-router'
 import { connect } from 'react-redux'
+import { Button, ButtonGroup, FormGroup, FormControl } from 'react-bootstrap'
 
 import { updateField } from '../../state/actions'
 import { eventMenu } from '../../state/selectors'
 
 const MenuEvent = ({ category, dishName, userOfDish, handleChange }) => {
   return <div>
-    <h1>What is everyone eating?</h1>
-    <p>Category</p>
-      <input type='text' name='category' value={category} onChange={handleChange} /> 
-    <p>Dish Name</p>
-      <input type='text' name='dishName' value={dishName} onChange={handleChange} /> 
-    <p>User</p>
-      <input type='text' name='userOfDish' value={userOfDish} onChange={handleChange} /> 
-    <button><Link to='single-event'>Let's go!</Link></button>
+    <FormGroup>
+      <h1>What is everyone eating?</h1>
+      <FormGroup>
+        <FormControl type='text' name='category' placeholder='course' onChange={handleChange} /> 
+        <FormControl type='text' name='dishName' placeholder='dish name' onChange={handleChange} /> 
+        <FormControl type='text' name='userOfDish' placeholder='person assigned to dish' onChange={handleChange} /> 
+      </FormGroup>  
+      <ButtonGroup>
+        <Button><Link to='single-event'>Let's go!</Link></Button>
+      </ButtonGroup>
+    </FormGroup>
   </div>
 }
 

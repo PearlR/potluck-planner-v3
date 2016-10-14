@@ -3,7 +3,7 @@ import React from 'react'
 const Welcome = () => {
   return <div>
     <h1>
-      Welcome to <span className="logo">Potluck Planner</span>
+      Potluck Planner
     </h1>
   </div>
 }

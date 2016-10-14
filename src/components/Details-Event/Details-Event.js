@@ -1,25 +1,24 @@
 import React from 'react'
 import { Link } from 'react-router'
 import { connect } from 'react-redux'
+import { Button, ButtonGroup, FormGroup, FormControl } from 'react-bootstrap'
 
 import { updateField } from '../../state/actions'
 import { eventDetails } from '../../state/selectors'
 
-const DetailsEvent = ({ date, time, location, description, inviteGuests, handleChange }) => {
+const DetailsEvent = ({ inviteGuests, handleChange }) => {
 
   return <div>
     <h1>Important Details</h1>
-    <p>Date</p>
-      <input type='text' name='date' value={date} onChange={handleChange} />
-    <p>Time</p>
-      <input type='text' name='time' value={time} onChange={handleChange} />
-    <p>Location</p>
-      <input type='text' name='location' value={location} onChange={handleChange} />
-    <p>Description</p>
-      <textarea type='text' name='description' value={description} onChange={handleChange} />
-    <br />
-    <p>{inviteGuests}</p>
-    <button><Link to='/invites'>Next</Link></button>
+    <FormGroup>
+      <FormControl type='text' name='date' placeholder='date' onChange={handleChange} />
+      <FormControl type='text' name='time' placeholder='time' onChange={handleChange} />
+      <FormControl type='text' name='location' placeholder='location' onChange={handleChange} />
+      <FormControl componentClass="textarea" name='description' placeholder='description' onChange={handleChange} />
+      <ButtonGroup>
+        <Button><Link to='/invites'>Next</Link></Button>
+      </ButtonGroup>
+    </FormGroup>
   </div>
 }
 

@@ -1,18 +1,21 @@
 import React from 'react'
 import { Link } from 'react-router'
 import { connect } from 'react-redux'
+import { Button, ButtonGroup, FormGroup, FormControl } from 'react-bootstrap'
 
 import { updateField } from '../../state/actions'
 import { eventInvites } from '../../state/selectors'
 
 const InviteEvent = ({ inviteeName, inviteeEmail, handleChange }) => {
   return <div>
-    <h1>Who's invited?</h1>
-    <p>Name</p>
-      <input type='text' name='inviteeName' value={inviteeName} onChange={handleChange} /> 
-    <p>Email</p>
-      <input type='text' name='inviteeEmail' value={inviteeEmail} onChange={handleChange} />
-    <button><Link to='menu'>Next</Link></button>
+    <FormGroup>
+      <h1>Who's invited?</h1>
+        <FormControl type='text' name='inviteeName' placeholder='Name' onChange={handleChange} /> 
+        <FormControl type='text' name='inviteeEmail' placeholder='Email' onChange={handleChange} />
+      <ButtonGroup>
+        <Button><Link to='menu'>Next</Link></Button>
+      </ButtonGroup>
+    </FormGroup>  
   </div>
 }
 
