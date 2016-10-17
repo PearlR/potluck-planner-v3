@@ -3,3 +3,6 @@ export const eventTitles = ({ eventTitle, headerTwo }) => ({ eventTitle, headerT
 export const eventDetails = ({ date, time, location, description }) => ({ date, time, location, description })
 export const eventInvites = ({ inviteeName, inviteeEmail }) => ({ inviteeName, inviteeEmail })
 export const eventMenu = ({ category, dishName, userOfDish }) => ({ category, dishName, userOfDish })
+export const singleEvent = ({ eventTitle, date, time, location, description, category, dishName, userOfDish, inviteeName }) => ({ eventTitle, date, time, location, description, category, dishName, userOfDish, inviteeName })
+export const loginSuccess = ({ username }) => ({ username })
+export const allEvents = ({ eventTitle, date, time, location,dishName, userOfDish, inviteeName }) => ({ eventTitle, date, time, location,dishName, userOfDish, inviteeName })

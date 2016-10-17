@@ -12,7 +12,8 @@ import CreateEvent from './components/Create-Event/Create-Event'
 import DetailsEvent from './components/Details-Event/Details-Event'
 import InviteEvent from './components/Invite-Event/Invite-Event'
 import MenuEvent from './components/Menu-Event/Menu-Event'
-import SingleEvent from './components/Single-Event/Single-Event.js'
+import SingleEvent from './components/Single-Event/Single-Event'
+import AllEvents from './components/All-Events/All-Events'
 
 import { reducer } from './state/reducer.js'
 
@@ -35,6 +36,7 @@ ReactDOM.render(
         <Route path='invites' component={InviteEvent} />
         <Route path='menu' component={MenuEvent} />
         <Route path='single-event' component={SingleEvent} />
+        <Route path='all-events' component={AllEvents} />
       </Route>
     </Router>
   </Provider>,

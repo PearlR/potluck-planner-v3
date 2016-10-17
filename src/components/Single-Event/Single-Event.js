@@ -1,5 +1,9 @@
 import React from 'react'
+import { Link } from 'react-router'
 import { connect } from 'react-redux'
+import { Button, ButtonGroup } from 'react-bootstrap'
+
+import { singleEvent } from '../../state/selectors'
 
 const SingleEvent = ({ eventTitle, date, time, location, description, category, dishName, userOfDish, inviteeName }) => {
   return <div>
@@ -11,45 +15,24 @@ const SingleEvent = ({ eventTitle, date, time, location, description, category, 
     <h2>Menu</h2>
     <table>
       <tr>  
-        <th>
-          Category
-        </th> 
-        <th>
-          Dish
-        </th>
-        <th> 
-          Assigned to
-        </th>
+        <th>Course</th> 
+        <th>Dish</th>
+        <th>Assigned to</th>
       </tr>
       <tr>  
-        <td>
-          {category}
-        </td> 
-        <td>
-          {dishName}
-        </td>
-        <td> 
-          {userOfDish}
-        </td>
+        <td>{category}</td> 
+        <td>{dishName}</td>
+        <td>{userOfDish}</td>
       </tr>
     </table>
     <h2>Guests</h2>
     <p>{inviteeName}</p>
+    <ButtonGroup>
+      <Button><Link to='all-events'>All Events</Link></Button>
+    </ButtonGroup>
   </div>
 }
 
-const mapStateToProps = ({ eventTitle, date, time, location, description, category, dishName, userOfDish, inviteeName }) => {
-  return {
-    eventTitle: eventTitle,
-    date: date,
-    time: time,
-    location: location,
-    description: description,
-    category: category,
-    dishName: dishName,
-    userOfDish: userOfDish,
-    inviteeName: inviteeName
-  }
-}
+const mapStateToProps = state => singleEvent(state)
 
 export default connect(mapStateToProps)(SingleEvent)

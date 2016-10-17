@@ -3,6 +3,8 @@ import { Link } from 'react-router'
 import { connect } from 'react-redux'
 import { Button } from 'react-bootstrap'
 
+import { loginSuccess } from '../../state/selectors'
+
 const LoginSuccess = ({ username }) => {
   return <div>
     <p>logged in as {username}</p>
@@ -11,10 +13,6 @@ const LoginSuccess = ({ username }) => {
   </div>
 }
 
-const mapStateToProps = ({ username }) => {
-  return {
-    username: username
-  }
-}
+const mapStateToProps = state => loginSuccess(state)
 
 export default connect(mapStateToProps)(LoginSuccess)

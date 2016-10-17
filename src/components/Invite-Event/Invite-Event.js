@@ -10,8 +10,8 @@ const InviteEvent = ({ inviteeName, inviteeEmail, handleChange }) => {
   return <div>
     <FormGroup>
       <h1>Who's invited?</h1>
-        <FormControl type='text' name='inviteeName' placeholder='Name' onChange={handleChange} /> 
-        <FormControl type='text' name='inviteeEmail' placeholder='Email' onChange={handleChange} />
+        <FormControl id="formControlsText" type='text' name='inviteeName' placeholder='Name' onChange={handleChange} /> 
+        <FormControl id='formControlsEmail' type='email' name='inviteeEmail' placeholder='Email' onChange={handleChange} />
       <ButtonGroup>
         <Button><Link to='menu'>Next</Link></Button>
       </ButtonGroup>
