@@ -6,7 +6,10 @@ import { Button, ButtonGroup, FormGroup, FormControl } from 'react-bootstrap'
 import { updateField } from '../../state/actions'
 import { eventDetails } from '../../state/selectors'
 
-const DetailsEvent = ({ inviteGuests, handleChange }) => {
+const DetailsEvent = props => {
+  const { 
+    handleChange 
+  } = props
 
   return <div>
     <h1>Important Details</h1>

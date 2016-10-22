@@ -1,6 +1,6 @@
 import React from 'react'
 
-import LoginSignInButtons from '../Login-Signin-buttons/Login-Signin-buttons'
+import LoginSignInButtons from '../LoginSigninButtons/LoginSigninButtons.jsx'
 
 const Login = () => {
   return <div>

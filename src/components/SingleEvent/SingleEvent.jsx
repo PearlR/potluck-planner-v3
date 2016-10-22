@@ -5,7 +5,19 @@ import { Button, ButtonGroup } from 'react-bootstrap'
 
 import { singleEvent } from '../../state/selectors'
 
-const SingleEvent = ({ eventTitle, date, time, location, description, category, dishName, userOfDish, inviteeName }) => {
+const SingleEvent = props => {
+  const { 
+    eventTitle, 
+    date, 
+    time, 
+    location, 
+    description, 
+    category, 
+    dishName, 
+    userOfDish, 
+    inviteeName 
+  } = props
+
   return <div>
     <h1>{eventTitle}</h1>
     <p>{time} on {date}</p>

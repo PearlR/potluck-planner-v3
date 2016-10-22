@@ -11,6 +11,7 @@ Potluck planner is an app that helps to solve the issue of co-ordinating who is 
 ## Technologies used to create the app
 
 - Node
+- Create-react-app 
 - React
 - React Dom
 - React Router

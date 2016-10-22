@@ -6,7 +6,11 @@ import { Button, ButtonGroup, FormGroup, FormControl } from 'react-bootstrap'
 import { updateField } from '../../state/actions'
 import { eventMenu } from '../../state/selectors'
 
-const MenuEvent = ({ category, dishName, userOfDish, handleChange }) => {
+const MenuEvent = props => {
+  const {
+    handleChange 
+  } = props
+  
   return <div>
     <FormGroup>
       <h1>What is everyone eating?</h1>

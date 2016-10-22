@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
-import Homepage from './components/Homepage/Homepage'
+import Homepage from './components/Homepage/Homepage.jsx'
 import { getCredentials } from './state/selectors'
 
 import './App.css'

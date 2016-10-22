@@ -1,6 +1,6 @@
 import React from 'react'
-import { Link } from 'react-router'
 import { connect } from 'react-redux'
+import { LinkContainer } from 'react-router-bootstrap'
 import { Navbar, Nav, NavItem } from 'react-bootstrap'
 
 import { updateField } from '../../state/actions'
@@ -16,12 +16,16 @@ const LoginSignInButtons = () => {
         <Navbar.Toggle />
         <Navbar.Collapse>
         <Nav pullRight>
-          <NavItem>
-            <Link to='#'>sign up</Link>
-          </NavItem>
-          <NavItem>
-            <Link to='/login'>log in</Link>
-          </NavItem>
+          <LinkContainer to='#'>
+            <NavItem>
+              Sign Up
+            </NavItem>
+          </LinkContainer>
+          <LinkContainer to='/login'>
+            <NavItem>
+              Log In
+            </NavItem>
+          </LinkContainer>
         </Nav>
         </Navbar.Collapse>
       </Navbar.Header>

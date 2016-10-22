@@ -6,7 +6,11 @@ import { Button, ButtonGroup, FormGroup, FormControl } from 'react-bootstrap'
 import { updateField } from '../../state/actions'
 import { eventInvites } from '../../state/selectors'
 
-const InviteEvent = ({ inviteeName, inviteeEmail, handleChange }) => {
+const InviteEvent = props => {
+  const { 
+    handleChange 
+  } = props
+
   return <div>
     <FormGroup>
       <h1>Who's invited?</h1>

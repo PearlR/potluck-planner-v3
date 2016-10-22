@@ -6,9 +6,16 @@ import { Button, ButtonGroup, FormControl, FormGroup } from 'react-bootstrap'
 import { updateField } from '../../state/actions'
 import { getCredentials } from '../../state/selectors'
 
-const Login = ({ username, password, handleChange }) => {
+const Login = props => {
+  const { 
+    username, 
+    password, 
+    handleChange 
+  } = props
+
   return <div>
   <FormGroup>
+      <h1>Login</h1>
       <FormControl type='text' name='username' placeholder={username} onChange={handleChange} />
       <FormControl type='text' name='password' placeholder={password} onChange={handleChange} /><br />
       <Button><Link to='success'>Login</Link></Button>
