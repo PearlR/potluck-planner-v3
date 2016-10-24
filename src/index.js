@@ -5,14 +5,15 @@ import { Provider } from 'react-redux'
 import { Router, Route, browserHistory } from 'react-router'
 
 import App from './App'
-import Homepage from './components/Homepage/Homepage'
-import Login from './components/Login/Login'
-import LoginSuccess from './components/Login-Success/Login-Success'
-import CreateEvent from './components/Create-Event/Create-Event'
-import DetailsEvent from './components/Details-Event/Details-Event'
-import InviteEvent from './components/Invite-Event/Invite-Event'
-import MenuEvent from './components/Menu-Event/Menu-Event'
-import SingleEvent from './components/Single-Event/Single-Event.js'
+import Homepage from './components/Homepage/Homepage.jsx'
+import Login from './components/Login/Login.jsx'
+import LoginSuccess from './components/LoginSuccess/LoginSuccess.jsx'
+import CreateEvent from './components/CreateEvent/CreateEvent.jsx'
+import DetailsEvent from './components/DetailsEvent/DetailsEvent.jsx'
+import InviteEvent from './components/InviteEvent/InviteEvent.jsx'
+import MenuEvent from './components/MenuEvent/MenuEvent.jsx'
+import SingleEvent from './components/SingleEvent/SingleEvent.jsx'
+import AllEvents from './components/AllEvents/AllEvents.jsx'
 
 import { reducer } from './state/reducer.js'
 
@@ -35,6 +36,7 @@ ReactDOM.render(
         <Route path='invites' component={InviteEvent} />
         <Route path='menu' component={MenuEvent} />
         <Route path='single-event' component={SingleEvent} />
+        <Route path='all-events' component={AllEvents} />
       </Route>
     </Router>
   </Provider>,

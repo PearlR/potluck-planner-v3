@@ -1,24 +1,28 @@
 body {
   margin: 0;
-  padding: 30px;
+  padding: 10px;
   font-family: sans-serif;
 }
 
-a {
+a:link {
   text-decoration: none;
   font-weight: bold;
-  color: blue;
+  color: red;
 }
 
-div {
-  margin-top: 20px;
-}
-
-input, button {
-  margin-right: 10px;
+a:hover {
+  color: darkred;
 }
 
 th, td {
   width: 220px;
   text-align: left;
+}
+
+button, input, textarea {
+  margin-top: 10px;
+}
+
+h1, h2, h3 {
+  font-weight: bold;
 }
