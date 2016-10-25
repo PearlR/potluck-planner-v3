@@ -14,11 +14,9 @@ const MenuEvent = props => {
   return <div>
     <FormGroup>
       <h1>What is everyone eating?</h1>
-      <FormGroup>
         <FormControl type='text' name='category' placeholder='course' onChange={handleChange} /> 
         <FormControl type='text' name='dishName' placeholder='dish name' onChange={handleChange} /> 
-        <FormControl type='text' name='userOfDish' placeholder='person assigned to dish' onChange={handleChange} /> 
-      </FormGroup>  
+        <FormControl type='text' name='userOfDish' placeholder='person assigned to dish' onChange={handleChange} />  
       <ButtonGroup>
         <Button><Link to='single-event'>Let's go!</Link></Button>
       </ButtonGroup>

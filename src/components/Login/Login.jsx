@@ -17,11 +17,11 @@ const Login = props => {
   <FormGroup>
       <h1>Login</h1>
       <FormControl type='text' name='username' placeholder={username} onChange={handleChange} />
-      <FormControl type='text' name='password' placeholder={password} onChange={handleChange} /><br />
-      <Button><Link to='success'>Login</Link></Button>
-    </FormGroup>
+      <FormControl type='text' name='password' placeholder={password} onChange={handleChange} />
     <ButtonGroup>
+      <Button><Link to='success'>Login</Link></Button>
     </ButtonGroup>
+    </FormGroup>
   </div>
 }
 

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router'
 import { connect } from 'react-redux'
-import { Button, ButtonGroup } from 'react-bootstrap'
+import { Button, ButtonGroup, FormGroup } from 'react-bootstrap'
 
 import { singleEvent } from '../../state/selectors'
 
@@ -39,9 +39,11 @@ const SingleEvent = props => {
     </table>
     <h2>Guests</h2>
     <p>{inviteeName}</p>
-    <ButtonGroup>
-      <Button><Link to='all-events'>All Events</Link></Button>
-    </ButtonGroup>
+    <FormGroup>
+      <ButtonGroup>
+        <Button><Link to='all-events'>All Events</Link></Button>
+      </ButtonGroup>
+    </FormGroup>
   </div>
 }
 

@@ -2,27 +2,51 @@ body {
   margin: 0;
   padding: 10px;
   font-family: sans-serif;
+  background: rgba(255, 153, 0, 0.7);
+  background-image: url('http://media.istockphoto.com/vectors/cookery-seamless-background-vector-id490690876');
+}
+
+p {
+  color: white;
 }
 
 a:link {
   text-decoration: none;
   font-weight: bold;
-  color: red;
+  color: orange;
 }
 
 a:hover {
-  color: darkred;
+  color: orange;
 }
 
 th, td {
   width: 220px;
   text-align: left;
+  color: white;
 }
 
-button, input, textarea {
+button {
   margin-top: 10px;
+  text-transform: uppercase;
+}
+
+input, textarea {
+  margin-top: 10px;
+  border: none;
 }
 
 h1, h2, h3 {
   font-weight: bold;
+  color: orange;
+  font-family: 'Oswald', sans-serif;
+  /*font-family: 'Roboto Slab', serif;*/
+}
+
+.main-container {
+  background: rgba(10, 10, 10, 0.9);
+  padding: 3%;
+  border-radius: 1px;
+  min-height: 100;
+  /*text-transform: uppercase;*/
 }
